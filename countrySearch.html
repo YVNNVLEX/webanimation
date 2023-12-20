@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>County Search</title>
+  </head>
+  <body>
+      <div class="loaderContent">
+        <div class="loader"></div>
+        <h1>Veuillez patientez </h1>
+    </div>                        
+    <main class="h-screen flex flex-col justify-center items-center gap-2">
+      <article id="searchBar" class="bg-white h-16 w-4/12 flex justify-between items-center gap-5 px-5">
+          <input
+            type="text"
+            id="text"
+            placeholder="pays"
+            class="bg-transparent w-full outline-none uppercase placeholder:text-xl"
+          />
+          <button onclick="search()" class="text-xl text-[crimson] uppercase">
+            Search
+          </button>
+      </article>
+      <section id="info" class="w-4/12 flex flex-col gap-5 "></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

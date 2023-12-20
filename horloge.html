@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Horloge</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100%;
+        background-color: #111B21;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        display: flex;
+        font-size: 80px;
+        color: white;
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .hour::after,.min::after{
+        content: ':';
+    }
+</style>
+<body>
+   <main>
+        <div class="hour">00</div>
+        <div class="min">00</div>
+        <div class="sec">00</div>
+   </main>
+   <script>
+        const hour = document.querySelector('.hour')
+        const min = document.querySelector('.min')
+        const sec = document.querySelector('.sec')
+        const changeFunc = ()=>{
+            var date = new Date()
+            hour.textContent = date.getHours()
+            min.textContent = date.getMinutes()
+            sec.textContent = date.getSeconds()
+        }
+        setInterval(changeFunc,1000)
+   </script>
+</body>
+</html>

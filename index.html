@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+    }
+    .cardContainer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        padding: 10px;
+        width: 30%;
+        box-shadow: 10px 10px 0px 0px rgb(116, 116, 116);
+        transition: box-shadow 1s ;
+    }
+    .cardContainer:hover{
+        box-shadow:  none;
+    }
+    .cardContainer img{
+        align-self: center;
+    }
+    .cardContainer p{
+        text-align: center;
+        font-weight: 500;
+    }
+    .cardContainer a{
+        text-decoration: none;
+        background-color: #FAB005;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 10px;
+        box-shadow: 0px 3px 0px 0px rgb(0, 0, 0);
+    }
+    .cardContainer a:hover{
+        background-color: #fff;
+        color: black;
+    }
+</style>
+<body>
+    <div class="loaderContent">
+        <div class="loader"></div>
+        <h1>Veuillez patientez </h1>
+    </div> 
+    <main>
+        <div class="card">
+            <section class="cardContainer">
+                <img src="./assets/flag.svg" alt="drapeau" class="logo" style="width: 20%;">
+                <p>Country search: API permettant de voir consulter les informations des pays que vous aimez</p>
+                <a href="./countrySearch.html" class="play">Play</a>
+            </section>
+            <section class="cardContainer">
+                <img src="./assets/clock.svg" alt="drapeau" class="logo" style="width: 20%;">
+                <p>Horloge: Horloge numérique fait en javascript</p>
+                <a href="./horloge.html" class="play">Play</a>
+            </section>
+        </div>
+        <h1 style="text-align: center; color:white; margin:20px 0  ;">PRESENTE PAR</h1>
+        <div class="marquee">
+            <ul class="marquee-content">
+              <li>ECHICOUA ELIE MALTHUS</li>
+              <li>GUEHI KA AMA ALEXANDRA </li>
+              <li>KACOU ANINI DARYL</li>
+              <li>KOFFI YAO RENE CYRIAQUE</li>
+              <li>N'GUESSAN KOUAKOU YANN ALEX</li>
+            </ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
